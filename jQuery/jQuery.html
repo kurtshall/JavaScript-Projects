@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+</body>
+<script>
+//setting up the basic html format to have a body with some divs and paragrpahs
+$(document).ready(function(){
+    $("html").append(
+        "<body>\
+            <div id='container'>\
+                <div id='inner'>\
+                    <h1>Basic jQuery</h1>\
+                    <p id='1'>Paragraph 1</p>\
+                    <p id='2'>Paragraph 2</p>\
+                    <p id='3'>Paragraph 3</p>\
+                </div>\
+            </div>\
+        </body>"
+    );
+    //making the second paragraph red
+    $("#2").css({"color":"red"});
+    //making the title fade out in .6 seconds when the p3 is clicked
+    $("#3").click(function() {
+        $('h1').fadeOut( 600 );
+    });
+    //typing to console when p1 is clicked
+    $("#1").click(function() {
+        console.log('You clicked a paragraph!');
+    });
+});
+
+
+
+
+</script>
+</html>
