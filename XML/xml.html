@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="XML_Bike"></p>
+
+<script>
+
+var XML_Parser, XML_Document;
+
+//creating a string
+var Bike = "<bike>"+
+"<brand>Cobra</brand>"+
+"<color>Red</color"+
+"<style>Road</style>"+
+"<year>2014</year>"+
+"</bike>";
+
+//create an XML DOM parser
+XML_Parser = new DOMParser();
+
+//created a new XML DOM object using text string
+XML_Document = XML_Parser.parseFromString(Bike, "text/xml");
+
+document.getElementById("XML_Bike").innerHTML = XML_Document.getElementsByTagName("brand")[0].childNodes[0].nodeValue;
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
